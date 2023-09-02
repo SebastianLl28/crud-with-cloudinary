@@ -1,0 +1,20 @@
+extends ./plantilla
+block content
+  div(class="py-5 animate-wiggle relative")
+    a(href="/", class="top-2 left-2 italic") <- volver a la lista 
+    h1(class="text-center text-5xl font-bold py-5") Formulario
+    form(method="post", class="w-full max-w-xl mx-auto space-y-5 bg-slate-800 py-4 px-4 rounded", id="form", enctype="multipart/form-data")
+      div
+        label(for="nombre") Nombre:
+        input(value=`${hotel ? hotel.nombre : ''}`, type="text", name="nombre" id="nombre", placeholder="Nombre", class="rounded py-3 px-3 text-gray-900 outline-none focus:outline-gray-500 text-[1.1em] w-full")
+      div
+        label(for="descripcion") Descripción:
+        input(value=`${hotel ? hotel.descripcion : ''}`, type="text", name="descripcion" id="descripcion", placeholder="Descripcion", class="rounded py-3 px-3 text-gray-900 outline-none focus:outline-gray-500 text-[1.1em] w-full")
+      if hotel
+        div(class="flex flex-col")
+          label(for="image") Imagen Actual:
+          img(src=hotel.image, alt="", class="w-full h-[20rem] object-cover bg-cover")
+      div(class="flex flex-col")
+        label(for="image") Nueva Imagen:
+        input(type="file", name="image", id="image", accept=".png, .jpg, .jpeg")
+      input(type="submit", value=`${!hotel ? 'Guardar Hotel' : 'Editar Hotel'}`, class="cursor-pointer font-bold bg-sky-600 py-3 px-5 rounded hover:bg-sky-700 transition-colors duration-300")

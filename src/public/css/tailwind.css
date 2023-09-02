@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* @layer button { */
+.basic-button {
+  @apply rounded font-bold py-3 px-5 transition-colors duration-300 cursor-pointer;
+}
+/* } */
