@@ -1,6 +1,6 @@
 # Crud project using cloudinary
 
-It is a simple SPA web application that allows users to CRUD hostels. With a focus on simplicity and efficiency, this app is geared towards saving photos to cloudinary and not storing it on the server.
+It is a simple web application that allows users to CRUD hostels. With a focus on simplicity and efficiency, this app is geared towards saving photos to cloudinary and not storing it on the server.
 
 ## Technologies
 - node
